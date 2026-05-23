@@ -1,11 +1,20 @@
-#!/usr/bin/env bash
-# exit on error
+#!/usr/bin/env border-bash
+# Exit immediately if a command exits with a non-zero status
 set -o errexit
 
-# Force upgrade pip and install requirements directly into Render's active environment
-python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
+echo "🚀 Starting Production Build Pipeline..."
 
-# Run migrations and static collection
-python manage.py collectstatic --no-input
+# 1. Install project dependencies
+echo "📦 Installing requirements..."
+pip install -r requirements.txt
+
+# 2. Compile static assets using WhiteNoise settings
+echo "🎨 Collecting static files..."
+python manage.py collectstatic --noinput
+
+# 3. Process structural database migrations
+echo "🗄️ Running database migrations..."
+python manage.py makemigrations
 python manage.py migrate
+
+echo "✅ Build Process Completed Successfully!"
