@@ -163,12 +163,13 @@
         const kit = urlParams.get('kit') || '1';
         
         const products = {
-            '1': { name: 'STARLINK STANDARD GEN 3 KIT', price: 11500, img: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=300&q=80' },
-            '2': { name: 'STARLINK ACTUATED GEN 2 KIT', price: 9500, img: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=300&q=80' },
-            'mini': { name: 'PORTABLE STARLINK MINI KIT', price: 7800, img: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=300&q=80' },
-            'adaptor': { name: 'PRO ETHERNET ADAPTER MOUNT', price: 1450, img: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=300&q=80' },
-            'mesh': { name: 'INTELLIGENT MESH WI-FI ROUTER NODE', price: 2900, img: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=300&q=80' }
-        };
+    '1': { name: 'STARLINK STANDARD GEN 3 KIT', price: 3500, img: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=300&q=80' },
+    '2': { name: 'STARLINK ACTUATED GEN 2 KIT', price: 2500, img: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=300&q=80' },
+    'mini': { name: 'PORTABLE STARLINK MINI KIT', price: 1500, img: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=300&q=80' },
+    'adaptor': { name: 'PRO ETHERNET ADAPTER MOUNT', price: 500, img: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=300&q=80' },
+    'mesh': { name: 'INTELLIGENT MESH WI-FI ROUTER NODE', price: 900, img: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=300&q=80' },
+    'cable': { name: 'STARLINK REPLACEMENT CABLE', price: 600, img: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=300&q=80' }
+};
 
         const selectedProduct = products[kit] || products['1'];
 
