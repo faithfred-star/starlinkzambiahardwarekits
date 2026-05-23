@@ -1,20 +1,20 @@
-#!/usr/bin/env border-bash
-# Exit immediately if a command exits with a non-zero status
+#!/usr/bin/env bash
+# exit on error
 set -o errexit
 
 echo "🚀 Starting Production Build Pipeline..."
 
-# 1. Install project dependencies
-echo "📦 Installing requirements..."
+# 1. Install required dependencies
+echo "📦 Installing requirements from requirements.txt..."
 pip install -r requirements.txt
 
-# 2. Compile static assets using WhiteNoise settings
+# 2. Collect all static assets for WhiteNoise
 echo "🎨 Collecting static files..."
 python manage.py collectstatic --noinput
 
-# 3. Process structural database migrations
-echo "🗄️ Running database migrations..."
+# 3. Create and apply database migrations for Zambia structures
+echo "🗄️ Creating and running database migrations..."
 python manage.py makemigrations
 python manage.py migrate
 
-echo "✅ Build Process Completed Successfully!"
+echo "✅ Build pipeline finished successfully!"
