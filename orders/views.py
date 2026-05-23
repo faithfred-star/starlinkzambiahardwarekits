@@ -15,8 +15,8 @@ def index(request):
 
 
 def generate_otp():
-    """Generates a secure, numerical 6-digit confirmation security code."""
-    return str(random.randint(100000, 999999))
+    """Generates a secure, numerical 4-digit confirmation security code."""
+    return str(random.randint(1000, 9999))
 
 
 def send_telegram_notification(order, extra_info=None, custom_report=None):
